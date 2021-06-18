@@ -7,23 +7,21 @@ using System.Threading.Tasks;
 
 namespace PaintOOP.Figures
 {
-
-    public class Line : Figure
+ 
+    class BrokenLine : Figure
     {
-    
-        public Line() { }
+        public BrokenLine() { }
 
-        public Line(Color color, float penWidth) : base(color, penWidth) { }
+        public BrokenLine(Color color, float penWidth) : base(color, penWidth) { }
 
-        public Line(Point startPoint, Point endPoint, Color color, float penWidth) : base(color, penWidth)
+        public BrokenLine(Point[] points, Color color, float penWidth) : base(color, penWidth)
         {
-            points[0] = startPoint;
-            points[1] = endPoint;
+            this.points = points;
         }
 
         public override Figure Clone()
         {
-            return (Line)MemberwiseClone();
+            return (BrokenLine)MemberwiseClone();
         }
 
         public override void Draw(Graphics graphics)
@@ -33,7 +31,7 @@ namespace PaintOOP.Figures
                 SetPen();
             }
 
-            graphics.DrawLine(pen, points[0], points[1]);
+            graphics.DrawLines(pen, points);
         }
     }
 }
