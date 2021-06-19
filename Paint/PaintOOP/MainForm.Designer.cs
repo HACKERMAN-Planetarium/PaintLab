@@ -48,6 +48,8 @@ namespace PaintOOP
             this.ColorDialog = new System.Windows.Forms.ColorDialog();
             this.UndoButton = new System.Windows.Forms.Button();
             this.RedoButton = new System.Windows.Forms.Button();
+            this.SerializerButton = new System.Windows.Forms.Button();
+            this.DeserializerButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PenWidthTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CornersTrackBar)).BeginInit();
@@ -226,11 +228,35 @@ namespace PaintOOP
             this.RedoButton.UseVisualStyleBackColor = true;
             this.RedoButton.Click += new System.EventHandler(this.RedoButton_Click);
             // 
+            // SerializerButton
+            // 
+            this.SerializerButton.BackColor = System.Drawing.Color.White;
+            this.SerializerButton.Location = new System.Drawing.Point(1236, 41);
+            this.SerializerButton.Name = "SerializerButton";
+            this.SerializerButton.Size = new System.Drawing.Size(148, 41);
+            this.SerializerButton.TabIndex = 27;
+            this.SerializerButton.Text = "Serielize";
+            this.SerializerButton.UseVisualStyleBackColor = false;
+            this.SerializerButton.Click += new System.EventHandler(this.SerializerButton_Click);
+            // 
+            // DeserializerButton
+            // 
+            this.DeserializerButton.BackColor = System.Drawing.Color.White;
+            this.DeserializerButton.Location = new System.Drawing.Point(1403, 41);
+            this.DeserializerButton.Name = "DeserializerButton";
+            this.DeserializerButton.Size = new System.Drawing.Size(148, 41);
+            this.DeserializerButton.TabIndex = 28;
+            this.DeserializerButton.Text = "Deserielize";
+            this.DeserializerButton.UseVisualStyleBackColor = false;
+            this.DeserializerButton.Click += new System.EventHandler(this.DeserializerButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1578, 841);
+            this.Controls.Add(this.DeserializerButton);
+            this.Controls.Add(this.SerializerButton);
             this.Controls.Add(this.RedoButton);
             this.Controls.Add(this.UndoButton);
             this.Controls.Add(this.BrokenLinebutton);
@@ -279,6 +305,8 @@ namespace PaintOOP
         private System.Windows.Forms.ColorDialog ColorDialog;
         private System.Windows.Forms.Button UndoButton;
         private System.Windows.Forms.Button RedoButton;
+        private System.Windows.Forms.Button SerializerButton;
+        private System.Windows.Forms.Button DeserializerButton;
     }
 }
 

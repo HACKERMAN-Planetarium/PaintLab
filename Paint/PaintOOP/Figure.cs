@@ -4,14 +4,20 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
 
 namespace PaintOOP
 {
+    [DataContract]
     public abstract class Figure
     {
+        [DataMember]
         public Point[] points;
+        [DataMember]
         public Color color { get; set; }
+        [DataMember]
         public float penWidth { get; set; }
+        [DataMember]
         public Boolean isFeel { get; set; }
 
         protected Pen pen;

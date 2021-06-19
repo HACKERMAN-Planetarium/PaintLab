@@ -1,0 +1,67 @@
+{
+  "undoList": {
+    "undoList": [
+      {
+        "$type": "PaintOOP.Figures.Rectangle, PaintOOP",
+        "width": 274.0,
+        "height": 264.0,
+        "brush": {
+          "$type": "System.Drawing.SolidBrush, System.Drawing.Common",
+          "Color": "White"
+        },
+        "points": [
+          "208, 139",
+          "482, 403"
+        ],
+        "color": "Black",
+        "penWidth": 3.0,
+        "isFeel": false
+      },
+      {
+        "$type": "PaintOOP.Figures.Rectangle, PaintOOP",
+        "width": 311.0,
+        "height": 281.0,
+        "brush": {
+          "$type": "System.Drawing.SolidBrush, System.Drawing.Common",
+          "Color": "White"
+        },
+        "points": [
+          "645, 108",
+          "956, 389"
+        ],
+        "color": "Black",
+        "penWidth": 3.0,
+        "isFeel": false
+      },
+      {
+        "$type": "PaintOOP.Figures.BrokenLine, PaintOOP",
+        "points": [
+          "140, 70",
+          "537, 27",
+          "573, 187",
+          "113, 235",
+          "61, 151"
+        ],
+        "color": "Black",
+        "penWidth": 3.0,
+        "isFeel": true
+      },
+      {
+        "$type": "PaintOOP.Figures.Polygon, PaintOOP",
+        "brush": {
+          "$type": "System.Drawing.SolidBrush, System.Drawing.Common",
+          "Color": "Red"
+        },
+        "points": [
+          "562, 476",
+          "703, 237",
+          "705, 595",
+          "563, 593"
+        ],
+        "color": "Black",
+        "penWidth": 3.0,
+        "isFeel": true
+      }
+    ]
+  }
+}

@@ -4,15 +4,18 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
 
 namespace PaintOOP.Figures
 {
+    [DataContract]
     public class Ellipse : Figure
     {
+        [DataMember]
         private float width;
-
+        [DataMember]
         private float height;
-
+        [DataMember]
         private Brush brush;
 
         public Ellipse() { }

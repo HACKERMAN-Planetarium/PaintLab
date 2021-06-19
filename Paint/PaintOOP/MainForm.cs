@@ -13,6 +13,7 @@ namespace PaintOOP
     public partial class MainForm : Form
     {
         private FigureStorage figureStorage;
+        private Serializer serializer;
 
         private ICreator currentCreator;
         private Figure currentFigure;
@@ -35,6 +36,8 @@ namespace PaintOOP
         {
             InitializeComponent();
             figureStorage = new FigureStorage();
+
+            serializer = new Serializer();
 
             color = Color.Black;
             fillColor = Color.White;
@@ -322,6 +325,26 @@ namespace PaintOOP
             if (figureStorage.redoStack.IsEmpty())
             {
                 RedoButton.Enabled = false;
+            }
+        }
+
+        private void SerializerButton_Click(object sender, EventArgs e)
+        {
+            serializer.Serialize(figureStorage);
+        }
+
+        private void DeserializerButton_Click(object sender, EventArgs e)
+        {
+            figureStorage = serializer.Deserialize(figureStorage);
+            PictureBox.Refresh();
+
+            if (!figureStorage.undoList.IsEmpty())
+            {
+                UndoButton.Enabled = true;
+            }
+            if (!figureStorage.redoStack.IsEmpty())
+            {
+                RedoButton.Enabled = true;
             }
         }
     }

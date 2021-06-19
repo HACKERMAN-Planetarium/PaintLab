@@ -1,0 +1,38 @@
+{
+  "undoList": {
+    "undoList": [
+      {
+        "$type": "PaintOOP.Figures.Rectangle, PaintOOP",
+        "width": 274.0,
+        "height": 264.0,
+        "brush": {
+          "$type": "System.Drawing.SolidBrush, System.Drawing.Common",
+          "Color": "White"
+        },
+        "points": [
+          "208, 139",
+          "482, 403"
+        ],
+        "color": "Black",
+        "penWidth": 3.0,
+        "isFeel": false
+      },
+      {
+        "$type": "PaintOOP.Figures.Rectangle, PaintOOP",
+        "width": 311.0,
+        "height": 281.0,
+        "brush": {
+          "$type": "System.Drawing.SolidBrush, System.Drawing.Common",
+          "Color": "White"
+        },
+        "points": [
+          "645, 108",
+          "956, 389"
+        ],
+        "color": "Black",
+        "penWidth": 3.0,
+        "isFeel": false
+      }
+    ]
+  }
+}

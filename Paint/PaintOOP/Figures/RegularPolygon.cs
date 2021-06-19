@@ -4,17 +4,18 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
 
 namespace PaintOOP.Figures
 {
-
+    [DataContract]
     public class RegularPolygon : Figure
     {
-
+        [DataMember]
         private PointF[] vertices;
-
+        [DataMember]
         public int numOfCorners;
-
+        [DataMember]
         private Brush brush;
 
         public RegularPolygon() { }
