@@ -12,6 +12,9 @@ namespace PaintOOP
 {
     public partial class MainForm : Form
     {
+        private Plugin plugin;
+        private Type currentFactory;
+
         private FigureStorage figureStorage;
         private Serializer serializer;
 
@@ -36,6 +39,8 @@ namespace PaintOOP
         {
             InitializeComponent();
             figureStorage = new FigureStorage();
+
+            plugin = new Plugin();
 
             serializer = new Serializer();
 
@@ -346,6 +351,31 @@ namespace PaintOOP
             {
                 RedoButton.Enabled = true;
             }
+        }
+
+        private void PluginButton_Click(object sender, EventArgs e)
+        {
+            string pluginName = plugin.Load();
+
+            if (pluginName != "")
+            {
+                PluginComboBox.Items.Add(pluginName);
+                if (!PluginComboBox.Enabled)
+                {
+                    PluginComboBox.Enabled = true;
+                }
+            }
+        }
+
+        private void PluginComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string pluginName = PluginComboBox.GetItemText(PluginComboBox.SelectedItem);
+
+            currentFactory = plugin.GetPluginType(pluginName);
+            currentCreator = (ICreator)Activator.CreateInstance(currentFactory);
+            currentFigure = currentCreator.Create(color, fillColor, penWidth);
+
+            StateChange(currentCreator);
         }
     }
 }

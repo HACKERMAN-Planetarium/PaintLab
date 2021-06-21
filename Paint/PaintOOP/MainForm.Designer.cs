@@ -50,6 +50,8 @@ namespace PaintOOP
             this.RedoButton = new System.Windows.Forms.Button();
             this.SerializerButton = new System.Windows.Forms.Button();
             this.DeserializerButton = new System.Windows.Forms.Button();
+            this.PluginButton = new System.Windows.Forms.Button();
+            this.PluginComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PenWidthTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CornersTrackBar)).BeginInit();
@@ -250,11 +252,33 @@ namespace PaintOOP
             this.DeserializerButton.UseVisualStyleBackColor = false;
             this.DeserializerButton.Click += new System.EventHandler(this.DeserializerButton_Click);
             // 
+            // PluginButton
+            // 
+            this.PluginButton.BackColor = System.Drawing.Color.White;
+            this.PluginButton.Location = new System.Drawing.Point(860, 41);
+            this.PluginButton.Name = "PluginButton";
+            this.PluginButton.Size = new System.Drawing.Size(148, 41);
+            this.PluginButton.TabIndex = 29;
+            this.PluginButton.Text = "Новый плагин";
+            this.PluginButton.UseVisualStyleBackColor = false;
+            this.PluginButton.Click += new System.EventHandler(this.PluginButton_Click);
+            // 
+            // PluginComboBox
+            // 
+            this.PluginComboBox.FormattingEnabled = true;
+            this.PluginComboBox.Location = new System.Drawing.Point(1028, 46);
+            this.PluginComboBox.Name = "PluginComboBox";
+            this.PluginComboBox.Size = new System.Drawing.Size(182, 33);
+            this.PluginComboBox.TabIndex = 30;
+            this.PluginComboBox.SelectedIndexChanged += new System.EventHandler(this.PluginComboBox_SelectedIndexChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1578, 841);
+            this.Controls.Add(this.PluginComboBox);
+            this.Controls.Add(this.PluginButton);
             this.Controls.Add(this.DeserializerButton);
             this.Controls.Add(this.SerializerButton);
             this.Controls.Add(this.RedoButton);
@@ -307,6 +331,8 @@ namespace PaintOOP
         private System.Windows.Forms.Button RedoButton;
         private System.Windows.Forms.Button SerializerButton;
         private System.Windows.Forms.Button DeserializerButton;
+        private System.Windows.Forms.Button PluginButton;
+        private System.Windows.Forms.ComboBox PluginComboBox;
     }
 }
 
